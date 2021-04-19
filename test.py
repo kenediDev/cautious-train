@@ -6,7 +6,7 @@ import sys
 import cowsay
 
 cowsay.dragon(
-    "Yei, we managed to run the application for testers, cool bro")
+    "Yei, we managed to run the application for testers, cool bro \n Author : Kenedi Novriansyah")
 
 
 coloredlogs.install()
