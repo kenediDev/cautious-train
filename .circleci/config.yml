@@ -15,7 +15,7 @@ jobs:
             
       - save_db:
           key: deps1-{{ .Branch }}-{{ checksum "requirements.txt" }}
-      -run:
+      - run:
           command: |
             . venv/bin/activate
             python -m pip install dbs/dist/dbs-0.1.tar.gz
