@@ -42,6 +42,8 @@ class UserTester(unittest.TestCase):
             'token': readme.get('token')
         })
         response = self.e.post(urls, data, content_type='application/json')
+        with open("core/setup_test/requirements.json", "w") as w:
+            w.write(json.dumps({'token': response.data.get('token')}))
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertNotEqual(response.data.get('token'), None)
         logger.info('Refresh token')
