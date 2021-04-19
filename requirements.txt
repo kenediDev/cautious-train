@@ -14,8 +14,6 @@ djangorestframework==3.12.4
 djangorestframework-jwt==1.11.0
 Faker==8.1.0
 humanfriendly==9.1
-ipython==7.22.0
-ipython-genutils==0.2.0
 isort==5.8.0
 jedi==0.18.0
 lazy-object-proxy==1.6.0
