@@ -6,6 +6,9 @@ from database.models.product import Category, Product
 from django.utils.translation import gettext as _
 from ds_product.serializer.product_serializer import ProductSerializer, ProductModelSerializer, CategoryModelSerializer
 from django.conf import settings
+from utils.filter import ProductFilter
+from django_filters import rest_framework as filters
+from rest_framework.generics import ListAPIView
 import os
 
 
@@ -78,6 +81,14 @@ class UpdateCategoryAPIView(APIView):
             serializer.save()
             return Response({"message": _("Category has been updated")}, status=status.HTTP_200_OK)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class ProductListAPIView(ListAPIView):
+    queryset = Product.objects.all()
+    serializer_class = ProductModelSerializer
+    filter_backends = (filters.DjangoFilterBackend,)
+    filterset_class = ProductFilter
+    permission_classes = [permissions.AllowAny, ]
 
 
 class ProductModelViewSets(ModelViewSet):

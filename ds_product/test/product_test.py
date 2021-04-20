@@ -92,3 +92,27 @@ class ProductTester(unittest.TestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data, {'message': message})
         logger.info(message)
+
+    def test_p_all(self):
+        urls = reverse("product-all")
+        response = self.e.get(urls, content_type='application/json')
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        logger.info("Get all product from generic")
+
+    @unittest.skipIf(Product.objects.count() == 0, "Skip! Product not have data")
+    def test_p_all_filter_name_(self):
+        product = Product.objects.first()
+        urls = reverse("product-all")
+        filters = '%s?name=%s' % (urls, product.name)
+        response = self.e.get(filters, content_type='application/json')
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        logger.info("Get all product with filter %s" % response.data)
+
+    @unittest.skipIf(Product.objects.count() == 0, "Skip! Product not have data")
+    def test_p_all_filter_sell(self):
+        product = Product.objects.last()
+        urls = reverse("product-all")
+        filters = "%s?sell=%s" % (urls, product.sell)
+        response = self.e.get(filters, content_type='application/json')
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        logger.info("Get all product with filter sell - %s" % response.data)
