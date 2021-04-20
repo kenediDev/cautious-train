@@ -165,14 +165,15 @@ class UserTester(unittest.TestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         logger.info(message)
 
-    @unittest.skipIf(not readme.get("token"), "Skip! missing token")
+    @unittest.skipIf(User.objects.filter(is_superuser=False).count() == 0, "Skip! not have member")
     def test_usr_prohibited(self):
         admin = User.objects.filter(is_superuser=True).first()
         payload = api_settings.JWT_PAYLOAD_HANDLER(admin)
         encode = api_settings.JWT_ENCODE_HANDLER(payload)
         urls = reverse("user-banned")
+        is_banned = User.objects.filter(is_superuser=False).first()
         data = json.dumps({
-            "token": User.objects.first().id
+            "token": is_banned.id
         })
         self.e.credentials(HTTP_AUTHORIZATION="Bearer " + encode)
         response = self.e.post(urls, data, content_type='application/json')

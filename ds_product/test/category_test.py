@@ -59,7 +59,10 @@ class CategoryTester(unittest.TestCase):
             'name': fake.name(),
             'icon': File(open("prefix/1599307724_Attack-On-Titan-Season-4-Every-Detail.jpeg", "rb")),
         }
-        self.e.credentials(HTTP_AUTHORIZATION="Bearer " + readme.get('token'))
+        payload = api_settings.JWT_PAYLOAD_HANDLER
+        encode = api_settings.JWT_ENCODE_HANDLER
+        token = encode(payload(category.user.user))
+        self.e.credentials(HTTP_AUTHORIZATION="Bearer " + token)
         response = self.e.post(urls, data)
         message = _("Category has been updated")
         self.assertEqual(response.status_code, status.HTTP_200_OK)

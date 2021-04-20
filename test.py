@@ -7,8 +7,16 @@ import logging
 import sys
 import cowsay
 
-cowsay.dragon(
-    "Yei, we managed to run the application for testers, cool bro \n Author : Kenedi Novriansyah")
+with open("prefix/d_rst.data", "r") as r:
+    readme = r.read()
+
+
+if readme:
+    with open("prefix/d_rst.data", "w") as w:
+        w.write("")
+else:
+    cowsay.dragon(
+        "Yei, we managed to run the application for testers, cool bro \n Author : Kenedi Novriansyah")
 
 
 coloredlogs.install()
