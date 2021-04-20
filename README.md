@@ -31,6 +31,10 @@ URL -> http://localhost:8000 :tulip:
 - /api/v1/product/update/product/<pk>/
 ```
 
-#### Tester :stuck_out_tongue_winking_eye:
+#### Tester :neckbeard:
+
+![alt text](https://scontent.fsrg1-1.fna.fbcdn.net/v/t1.6435-9/175758982_1390683727931711_3082662947831116206_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=730e14&_nc_eui2=AeHuyis0RzbRK6sYU5aYsSrnkkBV5nb7szaSQFXmdvuzNgbJkVjZ4tluDVQMj5xFpp2eR0x-qbn0s2xZcmU79Ly1&_nc_ohc=adfpTfjTgbYAX_lk4EM&_nc_ht=scontent.fsrg1-1.fna&oh=2104356c659739f0681f6b652730cd2e&oe=60A503A8)
+
+#### CI :stuck_out_tongue_winking_eye:
 
 ![alt text](https://scontent.fsrg1-1.fna.fbcdn.net/v/t1.6435-9/175666181_1390684994598251_3632526779222528381_n.jpg?_nc_cat=104&ccb=1-3&_nc_sid=730e14&_nc_eui2=AeHijFBn_vV_eaooKoXH-FEHGgYeBwBvWQEaBh4HAG9ZAWmFyDpfUurWaXvd83tg3uNR-muEnM6ETg_gInHfQFZq&_nc_ohc=-V5l1gXHnw0AX-GowA9&_nc_ht=scontent.fsrg1-1.fna&oh=a9c094a9c991da99443ff8a299cbfdc5&oe=60A5B30B)
