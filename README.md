@@ -6,10 +6,8 @@ URL -> http://localhost:8000 :tulip:
 
 ```
 - /api/v1/user/
-- /api/v1/user/
 - /api/v1/user/<pk>/
 - /api/v1/user/<pk>\.<format>/
-- /api/v1/user/\.<format>/
 - /api/v1/user/\.<format>/
 - /api/v1/user/banned/accounts/
 - /api/v1/user/reset/password/
@@ -21,6 +19,16 @@ URL -> http://localhost:8000 :tulip:
 - /refresh-authtoken/
 - /static/<path>
 - /verify-authtoken/
+- /api/v1/product/
+- /api/v1/product/<pk>/
+- /api/v1/product/<pk>\.<format>/
+- /api/v1/product/\.<format>/
+- /api/v1/product/category/
+- /api/v1/product/category/<pk>/
+- /api/v1/product/category/<pk>\.<format>/
+- /api/v1/product/category\.<format>/
+- /api/v1/product/update/category/<pk>/
+- /api/v1/product/update/product/<pk>/
 ```
 
 #### Tester
