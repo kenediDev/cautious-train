@@ -1,0 +1,970 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Snippets API",
+        "description": "Test description",
+        "termsOfService": "https://www.google.com/policies/terms/",
+        "contact": {
+            "email": "contact@snippets.local"
+        },
+        "license": {
+            "name": "BSD License"
+        },
+        "version": "v1"
+    },
+    "basePath": "/",
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "securityDefinitions": {
+        "Basic": {
+            "type": "basic"
+        }
+    },
+    "security": [
+        {
+            "Basic": []
+        }
+    ],
+    "paths": {
+        "/api/v1/product/": {
+            "get": {
+                "operationId": "api_v1_product_list",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/ProductModel"
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "api"
+                ]
+            },
+            "post": {
+                "operationId": "api_v1_product_create",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ProductModel"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/ProductModel"
+                        }
+                    }
+                },
+                "tags": [
+                    "api"
+                ]
+            },
+            "parameters": []
+        },
+        "/api/v1/product/category/": {
+            "get": {
+                "operationId": "api_v1_product_category_list",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/CategoryModel"
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "api"
+                ]
+            },
+            "post": {
+                "operationId": "api_v1_product_category_create",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CategoryModel"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/CategoryModel"
+                        }
+                    }
+                },
+                "tags": [
+                    "api"
+                ]
+            },
+            "parameters": []
+        },
+        "/api/v1/product/category/{id}/": {
+            "get": {
+                "operationId": "api_v1_product_category_read",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/CategoryModel"
+                        }
+                    }
+                },
+                "tags": [
+                    "api"
+                ]
+            },
+            "put": {
+                "operationId": "api_v1_product_category_update",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CategoryModel"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/CategoryModel"
+                        }
+                    }
+                },
+                "tags": [
+                    "api"
+                ]
+            },
+            "patch": {
+                "operationId": "api_v1_product_category_partial_update",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CategoryModel"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/CategoryModel"
+                        }
+                    }
+                },
+                "tags": [
+                    "api"
+                ]
+            },
+            "delete": {
+                "operationId": "api_v1_product_category_delete",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "204": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "api"
+                ]
+            },
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "description": "A unique integer value identifying this category.",
+                    "required": true,
+                    "type": "integer"
+                }
+            ]
+        },
+        "/api/v1/product/retrieve/all/": {
+            "get": {
+                "operationId": "api_v1_product_retrieve_all_list",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "sell",
+                        "in": "query",
+                        "description": "",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/ProductModel"
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "api"
+                ]
+            },
+            "parameters": []
+        },
+        "/api/v1/product/update/category/{id}/": {
+            "post": {
+                "operationId": "api_v1_product_update_category_create",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "201": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "api"
+                ]
+            },
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "description": "A unique integer value identifying this category.",
+                    "required": true,
+                    "type": "integer"
+                }
+            ]
+        },
+        "/api/v1/product/update/product/{id}/": {
+            "post": {
+                "operationId": "api_v1_product_update_product_create",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "201": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "api"
+                ]
+            },
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "description": "A unique integer value identifying this product.",
+                    "required": true,
+                    "type": "integer"
+                }
+            ]
+        },
+        "/api/v1/product/{id}/": {
+            "get": {
+                "operationId": "api_v1_product_read",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/ProductModel"
+                        }
+                    }
+                },
+                "tags": [
+                    "api"
+                ]
+            },
+            "put": {
+                "operationId": "api_v1_product_update",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ProductModel"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/ProductModel"
+                        }
+                    }
+                },
+                "tags": [
+                    "api"
+                ]
+            },
+            "patch": {
+                "operationId": "api_v1_product_partial_update",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ProductModel"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/ProductModel"
+                        }
+                    }
+                },
+                "tags": [
+                    "api"
+                ]
+            },
+            "delete": {
+                "operationId": "api_v1_product_delete",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "204": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "api"
+                ]
+            },
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "description": "A unique integer value identifying this product.",
+                    "required": true,
+                    "type": "integer"
+                }
+            ]
+        },
+        "/api/v1/user/": {
+            "get": {
+                "operationId": "api_v1_user_list",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/UserModel"
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "api"
+                ]
+            },
+            "post": {
+                "operationId": "api_v1_user_create",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/UserModel"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/UserModel"
+                        }
+                    }
+                },
+                "tags": [
+                    "api"
+                ]
+            },
+            "parameters": []
+        },
+        "/api/v1/user/banned/accounts/": {
+            "post": {
+                "operationId": "api_v1_user_banned_accounts_create",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "201": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "api"
+                ]
+            },
+            "parameters": []
+        },
+        "/api/v1/user/reset/password/": {
+            "post": {
+                "operationId": "api_v1_user_reset_password_create",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "201": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "api"
+                ]
+            },
+            "parameters": []
+        },
+        "/api/v1/user/update/accounts/": {
+            "post": {
+                "operationId": "api_v1_user_update_accounts_create",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "201": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "api"
+                ]
+            },
+            "parameters": []
+        },
+        "/api/v1/user/update/accounts/avatar/": {
+            "post": {
+                "operationId": "api_v1_user_update_accounts_avatar_create",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "201": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "api"
+                ]
+            },
+            "parameters": []
+        },
+        "/api/v1/user/update/password/": {
+            "post": {
+                "operationId": "api_v1_user_update_password_create",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "201": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "api"
+                ]
+            },
+            "parameters": []
+        },
+        "/api/v1/user/{id}/": {
+            "get": {
+                "operationId": "api_v1_user_read",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/UserModel"
+                        }
+                    }
+                },
+                "tags": [
+                    "api"
+                ]
+            },
+            "put": {
+                "operationId": "api_v1_user_update",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/UserModel"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/UserModel"
+                        }
+                    }
+                },
+                "tags": [
+                    "api"
+                ]
+            },
+            "patch": {
+                "operationId": "api_v1_user_partial_update",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/UserModel"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/UserModel"
+                        }
+                    }
+                },
+                "tags": [
+                    "api"
+                ]
+            },
+            "delete": {
+                "operationId": "api_v1_user_delete",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "204": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "api"
+                ]
+            },
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "description": "A unique integer value identifying this user.",
+                    "required": true,
+                    "type": "integer"
+                }
+            ]
+        },
+        "/authtoken/": {
+            "post": {
+                "operationId": "authtoken_create",
+                "summary": "API View that receives a POST with a user's username and password.",
+                "description": "Returns a JSON Web Token that can be used for authenticated requests.",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/JSONWebToken"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/JSONWebToken"
+                        }
+                    }
+                },
+                "tags": [
+                    "authtoken"
+                ]
+            },
+            "parameters": []
+        },
+        "/refresh-authtoken/": {
+            "post": {
+                "operationId": "refresh-authtoken_create",
+                "summary": "API View that returns a refreshed token (with new expiration) based on\nexisting token",
+                "description": "If 'orig_iat' field (original issued-at-time) is found, will first check\nif it's within expiration window, then copy it to the new token",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/RefreshJSONWebToken"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/RefreshJSONWebToken"
+                        }
+                    }
+                },
+                "tags": [
+                    "refresh-authtoken"
+                ]
+            },
+            "parameters": []
+        },
+        "/verify-authtoken/": {
+            "post": {
+                "operationId": "verify-authtoken_create",
+                "description": "API View that checks the veracity of a token, returning the token if it\nis valid.",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/VerifyJSONWebToken"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/VerifyJSONWebToken"
+                        }
+                    }
+                },
+                "tags": [
+                    "verify-authtoken"
+                ]
+            },
+            "parameters": []
+        }
+    },
+    "definitions": {
+        "ProductModel": {
+            "required": [
+                "name",
+                "sell",
+                "promo",
+                "agent",
+                "description",
+                "author"
+            ],
+            "type": "object",
+            "properties": {
+                "id": {
+                    "title": "ID",
+                    "type": "integer",
+                    "readOnly": true
+                },
+                "public_id": {
+                    "title": "Public id",
+                    "type": "string",
+                    "maxLength": 225,
+                    "minLength": 1,
+                    "x-nullable": true
+                },
+                "name": {
+                    "title": "Name",
+                    "type": "string",
+                    "maxLength": 225,
+                    "minLength": 1
+                },
+                "photo": {
+                    "title": "Photo",
+                    "type": "string",
+                    "readOnly": true,
+                    "format": "uri"
+                },
+                "sell": {
+                    "title": "Sell",
+                    "type": "string",
+                    "format": "decimal"
+                },
+                "promo": {
+                    "title": "Promo",
+                    "type": "string",
+                    "format": "decimal"
+                },
+                "agent": {
+                    "title": "Agent",
+                    "type": "string",
+                    "format": "decimal"
+                },
+                "status": {
+                    "title": "Status",
+                    "type": "integer"
+                },
+                "description": {
+                    "title": "Description",
+                    "type": "string",
+                    "minLength": 1
+                },
+                "createAt": {
+                    "title": "CreateAt",
+                    "type": "string",
+                    "format": "date-time",
+                    "readOnly": true
+                },
+                "updateAt": {
+                    "title": "UpdateAt",
+                    "type": "string",
+                    "format": "date-time",
+                    "x-nullable": true
+                },
+                "author": {
+                    "title": "Author",
+                    "type": "integer"
+                },
+                "category": {
+                    "title": "Category",
+                    "type": "integer",
+                    "x-nullable": true
+                }
+            }
+        },
+        "CategoryModel": {
+            "required": [
+                "name",
+                "updateAt",
+                "user",
+                "product_many"
+            ],
+            "type": "object",
+            "properties": {
+                "id": {
+                    "title": "ID",
+                    "type": "integer",
+                    "readOnly": true
+                },
+                "public_id": {
+                    "title": "Public id",
+                    "type": "string",
+                    "maxLength": 225,
+                    "minLength": 1,
+                    "x-nullable": true
+                },
+                "name": {
+                    "title": "Name",
+                    "type": "string",
+                    "maxLength": 225,
+                    "minLength": 1
+                },
+                "icon": {
+                    "title": "Icon",
+                    "type": "string",
+                    "readOnly": true,
+                    "format": "uri"
+                },
+                "createAt": {
+                    "title": "CreateAt",
+                    "type": "string",
+                    "format": "date-time",
+                    "readOnly": true
+                },
+                "updateAt": {
+                    "title": "UpdateAt",
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "user": {
+                    "title": "User",
+                    "type": "integer"
+                },
+                "product_many": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    },
+                    "uniqueItems": true
+                }
+            }
+        },
+        "UserModel": {
+            "required": [
+                "password",
+                "username"
+            ],
+            "type": "object",
+            "properties": {
+                "id": {
+                    "title": "ID",
+                    "type": "integer",
+                    "readOnly": true
+                },
+                "password": {
+                    "title": "Password",
+                    "type": "string",
+                    "maxLength": 128,
+                    "minLength": 1
+                },
+                "last_login": {
+                    "title": "Last login",
+                    "type": "string",
+                    "format": "date-time",
+                    "x-nullable": true
+                },
+                "is_superuser": {
+                    "title": "Superuser status",
+                    "description": "Designates that this user has all permissions without explicitly assigning them.",
+                    "type": "boolean"
+                },
+                "username": {
+                    "title": "Username",
+                    "description": "Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.",
+                    "type": "string",
+                    "pattern": "^[\\w.@+-]+$",
+                    "maxLength": 150,
+                    "minLength": 1
+                },
+                "first_name": {
+                    "title": "First name",
+                    "type": "string",
+                    "maxLength": 150
+                },
+                "last_name": {
+                    "title": "Last name",
+                    "type": "string",
+                    "maxLength": 150
+                },
+                "email": {
+                    "title": "Email address",
+                    "type": "string",
+                    "format": "email",
+                    "maxLength": 254
+                },
+                "is_staff": {
+                    "title": "Staff status",
+                    "description": "Designates whether the user can log into this admin site.",
+                    "type": "boolean"
+                },
+                "is_active": {
+                    "title": "Active",
+                    "description": "Designates whether this user should be treated as active. Unselect this instead of deleting accounts.",
+                    "type": "boolean"
+                },
+                "date_joined": {
+                    "title": "Date joined",
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "groups": {
+                    "description": "The groups this user belongs to. A user will get all permissions granted to each of their groups.",
+                    "type": "array",
+                    "items": {
+                        "description": "The groups this user belongs to. A user will get all permissions granted to each of their groups.",
+                        "type": "integer"
+                    },
+                    "uniqueItems": true
+                },
+                "user_permissions": {
+                    "description": "Specific permissions for this user.",
+                    "type": "array",
+                    "items": {
+                        "description": "Specific permissions for this user.",
+                        "type": "integer"
+                    },
+                    "uniqueItems": true
+                }
+            }
+        },
+        "JSONWebToken": {
+            "required": [
+                "username",
+                "password"
+            ],
+            "type": "object",
+            "properties": {
+                "username": {
+                    "title": "Username",
+                    "type": "string",
+                    "minLength": 1
+                },
+                "password": {
+                    "title": "Password",
+                    "type": "string",
+                    "minLength": 1
+                }
+            }
+        },
+        "RefreshJSONWebToken": {
+            "required": [
+                "token"
+            ],
+            "type": "object",
+            "properties": {
+                "token": {
+                    "title": "Token",
+                    "type": "string",
+                    "minLength": 1
+                }
+            }
+        },
+        "VerifyJSONWebToken": {
+            "required": [
+                "token"
+            ],
+            "type": "object",
+            "properties": {
+                "token": {
+                    "title": "Token",
+                    "type": "string",
+                    "minLength": 1
+                }
+            }
+        }
+    }
+}

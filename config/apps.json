@@ -1,1 +1,7 @@
-["django_filters", "django_extensions", "rest_framework", "database"]
+[
+  "django_filters",
+  "django_extensions",
+  "rest_framework",
+  "database",
+  "drf_yasg"
+]

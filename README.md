@@ -41,3 +41,9 @@ URL -> http://localhost:8000 :tulip:
 #### CI :stuck_out_tongue_winking_eye:
 
 ![alt text](https://scontent.fsrg1-1.fna.fbcdn.net/v/t1.6435-9/175666181_1390684994598251_3632526779222528381_n.jpg?_nc_cat=104&ccb=1-3&_nc_sid=730e14&_nc_eui2=AeHijFBn_vV_eaooKoXH-FEHGgYeBwBvWQEaBh4HAG9ZAWmFyDpfUurWaXvd83tg3uNR-muEnM6ETg_gInHfQFZq&_nc_ohc=-V5l1gXHnw0AX-GowA9&_nc_ht=scontent.fsrg1-1.fna&oh=a9c094a9c991da99443ff8a299cbfdc5&oe=60A5B30B)
+
+#### Swagger :fire:
+
+![alt text](https://scontent.fsrg1-1.fna.fbcdn.net/v/t1.6435-9/175816056_1390772261256191_4374732546324776266_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=730e14&_nc_eui2=AeFGws2mJGUjp1iTr61tiyJ2QF6f8-e1M1VAXp_z57UzVUKtUi1JlaTTGDE459vWDeuCKXEZulaYzBszFzyY0HPW&_nc_ohc=74uuwqe7VFIAX8x7Ea0&_nc_oc=AQmMTKTEZvcn--0jsQIda97uhnKiVUL7fETG6IYvZxnvIaj3jDWmgq2rAY7RdzpS1AQ&_nc_ht=scontent.fsrg1-1.fna&oh=ebb5cc770bce8b1a1e622d62c0eeb027&oe=60A5A93A)
+
+![alt text](https://scontent.fsrg1-1.fna.fbcdn.net/v/t1.6435-9/176130479_1390772277922856_5942811403332799966_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=730e14&_nc_eui2=AeHaEpEJVFQTR0BhXyddigl3e7jDfFZ0K7l7uMN8VnQruai5l41CP6V6E-UjodNeuCh2si7RqS7CS5e-wQLHOXQz&_nc_ohc=Ru9UwGriDvsAX98yebX&_nc_ht=scontent.fsrg1-1.fna&oh=0eff4c9bb282b936d28d531f7850e4e4&oe=60A3D05B)

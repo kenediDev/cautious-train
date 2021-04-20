@@ -184,3 +184,7 @@ EMAIL_HOST_USER = os.environ.get('smtp_user')
 EMAIL_HOST_PASSWORD = os.environ.get('smtp_pass')
 EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
+
+SWAGGER_SETTINGS = {
+    "DEFAULT_INFO": "ds.urls.api_info"
+}
