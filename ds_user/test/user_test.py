@@ -20,6 +20,9 @@ class UserTester(unittest.TestCase):
     def setUp(self):
         self.e = APIClient()
 
+    def test_usr_a(self):
+        logger.critical("User Tester")
+
     @unittest.skipIf(User.objects.count() == 0, "user not have data")
     def test_usr_login(self):
         user = User.objects.first()

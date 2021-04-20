@@ -11,9 +11,14 @@ database/migrations/0001_initial.py
 database/migrations/0002_alter_accounts_location.py
 database/migrations/0003_alter_accounts_location.py
 database/migrations/0004_accounts_is_banned.py
+database/migrations/0005_category_product.py
+database/migrations/0006_category_public_id.py
+database/migrations/0007_auto_20210420_1439.py
+database/migrations/0008_product_category.py
 database/migrations/__init__.py
 database/models/__init__.py
 database/models/base.py
+database/models/product.py
 database/models/user.py
 dbs/__init__.py
 dbs/asgi.py

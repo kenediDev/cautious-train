@@ -1,1 +1,5 @@
-["core.apps.CoreConfig", "ds_user.apps.DsUserConfig"]
+[
+  "core.apps.CoreConfig",
+  "ds_user.apps.DsUserConfig",
+  "ds_product.apps.DsProductConfig"
+]

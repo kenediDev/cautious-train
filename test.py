@@ -1,4 +1,6 @@
 from ds_user.test.user_test import UserTester
+from ds_product.test.category_test import CategoryTester
+from ds_product.test.product_test import ProductTester
 import coloredlogs
 import unittest
 import logging
